@@ -1,199 +1,143 @@
 <!DOCTYPE html>
-
 <html lang="ru">
-
 <head>
-    
-    <title>Лабораторная работа 1: гиперссылки и форма</title>
+    <meta charset="UTF-8" />     <!--Эта строка указывает браузеру, в какой кодировке символов сохранён файл, чтобы он правильно отображал текст-->
+    <title>My project site</title>
 </head>
-
 <body>
+    <h1>Welcome to my site</h1>
 
-    <h1>Лабораторная работа 1: гиперссылки и форма</h1>
+    <h2>Гиперссылки:</h2>
 
-    <h2>Маркированный список гиперссылок</h2>
-
-    <ul>
-
-        <li>
-            Абсолютная ссылка на главную страницу сайта kubsu.ru:
-            <a href="http://kubsu.ru/">КубГУ</a>
-        </li>
-
-        <li>
-            Абсолютная ссылка на главную сайта kubsu.ru по протоколу https:
-            <a href="https://kubsu.ru/">КубГУ (https)</a>
-        </li>
-
-        <li>
-            Ссылка-изображение:
-            <a href="https://kubsu.ru/">
-                <img src="image.jpg" alt="Ссылка на КубГУ" style="width: 100px;" />
-            </a>
-        </li>
-
-        <li>
-            Сокращенная ссылка на внутреннюю страницу:
-            <a href="/about">О сайте</a>
-        </li>
-
-        <li>
-            Сокращенная ссылка на главную страницу:
-            <a href="/">Главная</a>
-        </li>
-
-        <li>
-            Ссылка на фрагмент текущей страницы:
-            <a href="#form-section">Перейти к форме</a>
-        </li>
-
-        <li>
-            Ссылка с тремя параметрами в URL:
-            <a href="/search?category=books&sort=price&order=asc">Поиск с параметрами</a>
-        </li>
-
-        <li>
-            Ссылка с параметром id в URL:
-            <a href="/product?id=42">Товар №42</a>
-        </li>
-
-        <li>
-            Относительная ссылка на страницу в текущем каталоге:
-            <a href="./page.html">Страница в текущем каталоге</a>
-        </li>
-
-        <li>
-            Относительная ссылка на страницу в каталоге about:
-            <a href="about/page.html">Страница в каталоге about</a>
-        </li>
-
-        <li>
-            Относительная ссылка на страницу в каталоге уровнем выше:
-            <a href="../page.html">Страница уровнем выше</a>
-        </li>
-
-        <li>
-            Относительная ссылка на страницу двумя уровнями выше:
-            <a href="../../page.html">Страница двумя уровнями выше</a>
-        </li>
-
-        <li>
-            Контекстная ссылка в тексте абзаца:
-            <p>
-                Подробнее о верстке можно почитать на
-                <a href="https://developer.mozilla.org/ru/docs/Web/HTML">сайте MDN</a>,
-                там собрана хорошая документация по HTML.
-            </p>
-        </li>
-
-        <li>
-            Ссылка на фрагмент страницы стороннего сайта:
-            <a href="https://developer.mozilla.org/ru/docs/Web/HTML#%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA">Раздел «Справочник» на MDN</a>
-        </li>
-
-        <li>
-            Ссылки из областей картинки (тег map), прямоугольная и круглая области:
-            <img src="image.jpg" alt="Карта ссылок" usemap="#linkmap" style="width: 300px;" />
-            <map name="linkmap">
-                <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область" />
-                <area shape="circle" coords="220,75,60" href="https://developer.mozilla.org/" alt="Круглая область" />
-            </map>
-        </li>
-
-        <li>
-            Ссылка с пустым href:
-            <a href="">Пустая ссылка</a>
-        </li>
-
-        <li>
-            Ссылка без href:
-            <a>Ссылка без href</a>
-        </li>
-
-        <li>
-            Ссылка, по которой запрещен переход поисковикам:
-            <a href="https://kubsu.ru/private" rel="nofollow">Закрытая от перехода ссылка</a>
-        </li>
-
-        <li>
-            Ссылка, запрещенная для индексации поисковиками:
-            <a href="https://kubsu.ru/hidden" rel="noindex nofollow">Ссылка, запрещенная для индексации</a>
-        </li>
-
-        <li>
-            Нумерованный список ссылок с подписями title:
-            <ol>
-                <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">КубГУ</a></li>
-                <li><a href="https://developer.mozilla.org/" title="Документация по веб-технологиям">MDN</a></li>
-                <li><a href="https://validator.w3.org/" title="Валидатор HTML-разметки">W3C Validator</a></li>
-            </ol>
-        </li>
-
-        <li>
-            Ссылка на файл на сервере FTP с авторизацией:
-            <a href="ftp://user:password@ftp.example.com/files/document.zip">Скачать файл по FTP</a>
-        </li>
-
-    </ul>
+    <a href="http://kubsu.ru/"> Абсолютная ссылка на главную страницу сайта kubsu.ru</a>
+    <br />
+    <a href="https://kubsu.ru/"> Абсолютная ссылка на главную сайта kubsu.ru по протоколу https</a>
+    <br />
+    Ссылка-изображение:
+    <br />
+    <a href="https://kubsu.ru/">
+    <img src="image.jpg" alt="Ссылка на КубГУ" style="width: 100px;" />
+    </a>
+    <br />
+    <a href="/about"> Сокращенная ссылка на внутреннюю страницу</a>
+    <br />
+    <a href="/"> Сокращенная ссылка на главную страницу</a>
+    <br />
+    <a href="#form-section"> Ссылка на фрагмент текущей страницы, например к форме</a>
+    <br />
+    <a href="/search?category=books&sort=price&order=asc"> Ссылка с тремя параметрами в URL</a>
+    <br />
+    <a href="/product?id=42"> Ссылка с параметром id в URL</a>
+    <br />
+    <a href="./page.html"> Относительная ссылка на страницу в текущем каталоге</a>
+    <br />
+    <a href="about/page.html"> Относительная ссылка на страницу в каталоге about</a>
+    <br />
+    <a href="../page.html"> Относительная ссылка на страницу в каталоге уровнем выше</a>
+    <br />
+    <a href="../../page.html"> Относительная ссылка на страницу двумя уровнями выше</a>
+    <br />
+    Контекстная ссылка в тексте абзаца:
+    <p>
+        Ссылка на сайт лучшего футбольного клуба в мире >>><a href="https://www.fcbarcelona.com/en/">ТУТ</a><<< (для удобства советую включить vpn)
+    </p>
+    Ссылка на фрагмент страницы стороннего сайта:
+    <br />
+    <a href="https://www.fcbarcelona.com/en/#stories"> Раздел Stories на сайте Барселоны</a>
+    <br />
+    Ссылки из областей картинки (тег map), прямоугольная и круглая области:
+    <br />
+    <img src="image.jpg" alt="Карта ссылок" usemap="#linkmap" style="width: 300px;" />
+    <map name="linkmap">
+        <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область" />
+        <area shape="circle" coords="220,75,60" href="https://www.fcbarcelona.com/en/" alt="Круглая область" />
+    </map>
+    <br />
+    <a href=""> Ссылка с пустым href</a>
+    <br />
+    <a>Ссылка без href</a>
+    <br />
+    <a href="https://kubsu.ru/private" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам</a>
+    <br />
+    <a href="https://kubsu.ru/hidden" rel="noindex nofollow"> Ссылка, запрещенная для индексации поисковиками</a>
+    <br />
+    Нумерованный список ссылок с подписями title:
+    <ol>
+        <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ"> КубГУ</a></li>
+        <li><a href="https://www.fcbarcelona.com/en/" title="FC Barcelona"> FC Barcelona</a></li>
+        <li><a href="https://open.spotify.com/" title="Spotify"> Spotify</a></li>
+    </ol>
+    <a href="ftp://user:password@ftp.example.com/files/document.zip"> Ссылка на скачивание файла на сервере FTP с авторизацией</a>
 
     <h2 id="form-section">Форма</h2>
 
     <form action="/" method="POST">
-
         <label>
-            ФИО:<br />
-            <input name="full-name" type="text" placeholder="Иванов Иван Иванович" />
-        </label><br /><br />
-
+        ФИО:
+        <br />
+            <input name="full-name" type="text" placeholder="блаев бла блаевич" />
+        </label>
+        <br />
+        <br />
         <label>
-            Телефон:<br />
+        Телефон:
+        <br />
             <input name="phone" type="tel" placeholder="+7 900 000-00-00" />
-        </label><br /><br />
-
+        </label>
+        <br />
+        <br />
         <label>
-            E-mail:<br />
+        E-mail:
+        <br />
             <input name="email" type="email" placeholder="example@mail.ru" />
-        </label><br /><br />
-
+        </label>
+        <br />
+        <br />
         <label>
-            Дата рождения:<br />
+        Дата рождения:
+        <br />
             <input name="birth-date" type="date" />
-        </label><br /><br />
-
-        Пол:<br />
+        </label>
+        <br />
+        <br />
+        Пол:
+        <br />
         <label><input type="radio" name="gender" value="male" checked="checked" /> Мужской</label>
-        <label><input type="radio" name="gender" value="female" /> Женский</label><br /><br />
-
+        <label><input type="radio" name="gender" value="female" /> Женский</label>
+        <br />
+        <br />
         <label>
-            Любимый язык программирования (можно выбрать несколько):<br />
-            <select name="fav-language[]" multiple="multiple">
-                <option value="Pascal">Pascal</option>
-                <option value="C">C</option>
-                <option value="C++">C++</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="PHP">PHP</option>
-                <option value="Python" selected="selected">Python</option>
-                <option value="Java">Java</option>
-                <option value="Haskell">Haskell</option>
-                <option value="Clojure">Clojure</option>
-                <option value="Prolog">Prolog</option>
-                <option value="Scala">Scala</option>
-            </select>
-        </label><br /><br />
-
+        Любимый язык программирования (можно выбрать несколько):
+        <br />
+        <select name="fav-language[]" multiple="multiple">
+            <option value="Pascal"> Pascal</option>
+            <option value="C"> C</option>
+            <option value="C++"> C++</option>
+            <option value="JavaScript"> JavaScript</option>
+            <option value="PHP"> PHP</option>
+            <option value="Python"> Python</option>
+            <option value="Java"> Java</option>
+            <option value="Haskell"> Haskell</option>
+            <option value="Clojure"> Clojure</option>
+            <option value="Prolog"> Prolog</option>
+            <option value="Scala"> Scala</option>
+        </select>
+        </label>
+        <br />
+        <br />
         <label>
-            Биография:<br />
-            <textarea name="biography" rows="5" cols="40"></textarea>
-        </label><br /><br />
-
+        Биография:
+        <br />
+        <textarea name="biography" rows="5" cols="40"></textarea>
+        </label>
+        <br />
+        <br />
         <label>
-            <input type="checkbox" name="contract-agree" /> С контрактом ознакомлен(а)
-        </label><br /><br />
-
+        <input type="checkbox" name="contract-agree" /> С контрактом ознакомлен(а)
+        </label>
+        <br />
+        <br />
         <input type="submit" value="Сохранить" />
-
     </form>
-
 </body>
-
 </html>
