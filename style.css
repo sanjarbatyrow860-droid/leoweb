@@ -1,24 +1,114 @@
 body {
-  font-family: sans-serif;
-  margin: auto;
-  max-width: 1280px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: #edbb00;
+    color: #004d98;
 }
 
-.navbar {
-  background-color: #313236;
-  border-radius: 2px;
-  max-width: 800px;
+#site-header {
+    width: 100%;
+    background-color: #a50044;
+    color: #004d98;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
-.navbar a {
-  color: #aaa;
-  display: inline-block;
-  font-size: 15px;
-  padding: 10px;
-  text-decoration: none;
+#site-header .logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
 }
 
-.navbar a:hover {
-  color: #ffffff;
+#site-header .header-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+#site-header .site-title {
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+#site-nav {
+    padding: 10px 20px;
+}
+
+#site-nav .nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    float: right;
+    /*justify-content: space-between;*/
+}
+
+#site-nav .nav-list li{
+    margin-left: 15px;
+    padding: 5px;
+}
+
+#site-nav .nav-list a {
+    display: block;
+    color: #004d98;
+    text-decoration: none;
+}
+
+#site-nav .nav-list li:hover{
+    margin-left: 15px;
+    background-color: #850044;
+}
+
+#site-nav .nav-list a:hover {
+    text-decoration: underline;
+}
+
+#content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#data-table th,
+#data-table td {
+    border: 1px solid #004d98;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+#data-table thead th {
+    background-color: #DB0030;
+    color: #004d98;
+}
+
+#data-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#site-footer {
+    width: 100%;
+    background-color: #a50044;
+    color: #edbb00;
+    text-align: center;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
