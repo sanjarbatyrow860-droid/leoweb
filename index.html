@@ -2,142 +2,210 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />     <!--Эта строка указывает браузеру, в какой кодировке символов сохранён файл, чтобы он правильно отображал текст-->
-    <title>My project site</title>
+    <title>Sanjar's site</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Welcome to my site</h1>
+    <header id="site-header">
+        <img class="logo" src="logo.png" alt="Логотип сайта" />
+        <div class="header-right">
+            <nav id="site-nav">
+                <ul class="nav-list">
+                    <li><a href=""> Меню</a></li>
+                    <li><a href="https://store.fcbarcelona.com/?srsltid=AU7gw4W1uq1Gv3y0rMX9GCYPNU25e3MJgW3dp-zN-AagT0-911BMbo3e"> Товары</a></li>
+                    <li><a href="https://www.fcbarcelona.com/en/football/first-team/news"> Новости</a></li>
+                </ul>
+            </nav>
+            <h1 class="site-title">Суетной сайт</h1>
+        </div>
+    </header>
+    <main id="content">
 
-    <h2>Гиперссылки:</h2>
+        <h2>Гиперссылки:</h2>
 
-    <a href="http://kubsu.ru/"> Абсолютная ссылка на главную страницу сайта kubsu.ru</a>
-    <br />
-    <a href="https://kubsu.ru/"> Абсолютная ссылка на главную сайта kubsu.ru по протоколу https</a>
-    <br />
-    Ссылка-изображение:
-    <br />
-    <a href="https://kubsu.ru/">
-    <img src="image.jpg" alt="Ссылка на КубГУ" style="width: 100px;" />
-    </a>
-    <br />
-    <a href="/about"> Сокращенная ссылка на внутреннюю страницу</a>
-    <br />
-    <a href="/"> Сокращенная ссылка на главную страницу</a>
-    <br />
-    <a href="#form-section"> Ссылка на фрагмент текущей страницы, например к форме</a>
-    <br />
-    <a href="/search?category=books&sort=price&order=asc"> Ссылка с тремя параметрами в URL</a>
-    <br />
-    <a href="/product?id=42"> Ссылка с параметром id в URL</a>
-    <br />
-    <a href="./page.html"> Относительная ссылка на страницу в текущем каталоге</a>
-    <br />
-    <a href="about/page.html"> Относительная ссылка на страницу в каталоге about</a>
-    <br />
-    <a href="../page.html"> Относительная ссылка на страницу в каталоге уровнем выше</a>
-    <br />
-    <a href="../../page.html"> Относительная ссылка на страницу двумя уровнями выше</a>
-    <br />
-    Контекстная ссылка в тексте абзаца:
-    <p>
-        Ссылка на сайт лучшего футбольного клуба в мире >>><a href="https://www.fcbarcelona.com/en/">ТУТ</a><<< (для удобства советую включить vpn)
-    </p>
-    Ссылка на фрагмент страницы стороннего сайта:
-    <br />
-    <a href="https://www.fcbarcelona.com/en/#stories"> Раздел Stories на сайте Барселоны</a>
-    <br />
-    Ссылки из областей картинки (тег map), прямоугольная и круглая области:
-    <br />
-    <img src="image.jpg" alt="Карта ссылок" usemap="#linkmap" style="width: 300px;" />
-    <map name="linkmap">
-        <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область" />
-        <area shape="circle" coords="220,75,60" href="https://www.fcbarcelona.com/en/" alt="Круглая область" />
-    </map>
-    <br />
-    <a href=""> Ссылка с пустым href</a>
-    <br />
-    <a>Ссылка без href</a>
-    <br />
-    <a href="https://kubsu.ru/private" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам</a>
-    <br />
-    <a href="https://kubsu.ru/hidden" rel="noindex nofollow"> Ссылка, запрещенная для индексации поисковиками</a>
-    <br />
-    Нумерованный список ссылок с подписями title:
-    <ol>
-        <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ"> КубГУ</a></li>
-        <li><a href="https://www.fcbarcelona.com/en/" title="FC Barcelona"> FC Barcelona</a></li>
-        <li><a href="https://open.spotify.com/" title="Spotify"> Spotify</a></li>
-    </ol>
-    <a href="ftp://user:password@ftp.example.com/files/document.zip"> Ссылка на скачивание файла на сервере FTP с авторизацией</a>
+        <a href="http://kubsu.ru/"> Абсолютная ссылка на главную страницу сайта kubsu.ru</a>
+        <br />
+        <a href="https://kubsu.ru/"> Абсолютная ссылка на главную сайта kubsu.ru по протоколу https</a>
+        <br />
+        Ссылка-изображение:
+        <br />
+        <a href="https://kubsu.ru/">
+        <img src="image.jpg" alt="Ссылка на КубГУ" style="width: 100px;" />
+        </a>
+        <br />
+        <a href="/about"> Сокращенная ссылка на внутреннюю страницу</a>
+        <br />
+        <a href="/"> Сокращенная ссылка на главную страницу</a>
+        <br />
+        <a href="#form-section"> Ссылка на фрагмент текущей страницы, например к форме</a>
+        <br />
+        <a href="/search?category=books&sort=price&order=asc"> Ссылка с тремя параметрами в URL</a>
+        <br />
+        <a href="/product?id=42"> Ссылка с параметром id в URL</a>
+        <br />
+        <a href="./page.html"> Относительная ссылка на страницу в текущем каталоге</a>
+        <br />
+        <a href="about/page.html"> Относительная ссылка на страницу в каталоге about</a>
+        <br />
+        <a href="../page.html"> Относительная ссылка на страницу в каталоге уровнем выше</a>
+        <br />
+        <a href="../../page.html"> Относительная ссылка на страницу двумя уровнями выше</a>
+        <br />
+        Контекстная ссылка в тексте абзаца:
+        <p>
+            Ссылка на сайт лучшего футбольного клуба в мире >>><a href="https://www.fcbarcelona.com/en/">ТУТ</a><<< (для удобства советую включить vpn)
+        </p>
+        Ссылка на фрагмент страницы стороннего сайта:
+        <br />
+        <a href="https://www.fcbarcelona.com/en/#stories"> Раздел Stories на сайте Барселоны</a>
+        <br />
+        Ссылки из областей картинки (тег map), прямоугольная и круглая области:
+        <br />
+        <img src="image.jpg" alt="Карта ссылок" usemap="#linkmap" style="width: 300px;" />
+        <map name="linkmap">
+            <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область" />
+            <area shape="circle" coords="220,75,60" href="https://www.fcbarcelona.com/en/" alt="Круглая область" />
+        </map>
+        <br />
+        <a href=""> Ссылка с пустым href</a>
+        <br />
+        <a>Ссылка без href</a>
+        <br />
+        <a href="https://kubsu.ru/private" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам</a>
+        <br />
+        <a href="https://kubsu.ru/hidden" rel="noindex nofollow"> Ссылка, запрещенная для индексации поисковиками</a>
+        <br />
+        Нумерованный список ссылок с подписями title:
+        <ol>
+            <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ"> КубГУ</a></li>
+            <li><a href="https://www.fcbarcelona.com/en/" title="FC Barcelona"> FC Barcelona</a></li>
+            <li><a href="https://open.spotify.com/" title="Spotify"> Spotify</a></li>
+        </ol>
+        <a href="ftp://user:password@ftp.example.com/files/document.zip"> Ссылка на скачивание файла на сервере FTP с авторизацией</a>
 
-    <h2 id="form-section">Форма</h2>
+        <h2>Таблица</h2>
 
-    <form action="/" method="POST">
-        <label>
-        ФИО:
-        <br />
-            <input name="full-name" type="text" placeholder="блаев бла блаевич" />
-        </label>
-        <br />
-        <br />
-        <label>
-        Телефон:
-        <br />
-            <input name="phone" type="tel" placeholder="+7 900 000-00-00" />
-        </label>
-        <br />
-        <br />
-        <label>
-        E-mail:
-        <br />
-            <input name="email" type="email" placeholder="example@mail.ru" />
-        </label>
-        <br />
-        <br />
-        <label>
-        Дата рождения:
-        <br />
-            <input name="birth-date" type="date" />
-        </label>
-        <br />
-        <br />
-        Пол:
-        <br />
-        <label><input type="radio" name="gender" value="male" checked="checked" /> Мужской</label>
-        <label><input type="radio" name="gender" value="female" /> Женский</label>
-        <br />
-        <br />
-        <label>
-        Любимый язык программирования (можно выбрать несколько):
-        <br />
-        <select name="fav-language[]" multiple="multiple">
-            <option value="Pascal"> Pascal</option>
-            <option value="C"> C</option>
-            <option value="C++"> C++</option>
-            <option value="JavaScript"> JavaScript</option>
-            <option value="PHP"> PHP</option>
-            <option value="Python"> Python</option>
-            <option value="Java"> Java</option>
-            <option value="Haskell"> Haskell</option>
-            <option value="Clojure"> Clojure</option>
-            <option value="Prolog"> Prolog</option>
-            <option value="Scala"> Scala</option>
-        </select>
-        </label>
-        <br />
-        <br />
-        <label>
-        Биография:
-        <br />
-        <textarea name="biography" rows="5" cols="40"></textarea>
-        </label>
-        <br />
-        <br />
-        <label>
-        <input type="checkbox" name="contract-agree" /> С контрактом ознакомлен(а)
-        </label>
-        <br />
-        <br />
-        <input type="submit" value="Сохранить" />
-    </form>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Язык программирования</th>
+                    <th>Год создания</th>
+                    <th>Парадигма</th>
+                    <th>Популярность</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Python</td>
+                    <td>1991</td>
+                    <td colspan="2">Мультипарадигменный (объектно-ориентированный, процедурный, функциональный)</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>1995</td>
+                    <td>Мультипарадигменный</td>
+                    <td>Очень высокая</td>
+                </tr>
+                <tr>
+                    <td>C++</td>
+                    <td>1985</td>
+                    <td>Объектно-ориентированный</td>
+                    <td>Высокая</td>
+                </tr>
+                <tr>
+                    <td>Haskell</td>
+                    <td>1990</td>
+                    <td>Функциональный</td>
+                    <td>Низкая</td>
+                </tr>
+                <tr>
+                    <td>Prolog</td>
+                    <td>1972</td>
+                    <td colspan="2">Логическое программирование</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>1995</td>
+                    <td>Объектно-ориентированный</td>
+                    <td>Высокая</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="form-section">Форма</h2>
+
+        <form action="/" method="POST">
+            <label>
+            ФИО:
+            <br />
+                <input name="full-name" type="text" placeholder="блаев бла блаевич" />
+            </label>
+            <br />
+            <br />
+            <label>
+            Телефон:
+            <br />
+                <input name="phone" type="tel" placeholder="+7 900 000-00-00" />
+            </label>
+            <br />
+            <br />
+            <label>
+            E-mail:
+            <br />
+                <input name="email" type="email" placeholder="example@mail.ru" />
+            </label>
+            <br />
+            <br />
+            <label>
+            Дата рождения:
+            <br />
+                <input name="birth-date" type="date" />
+            </label>
+            <br />
+            <br />
+            Пол:
+            <br />
+            <label><input type="radio" name="gender" value="male" checked="checked" /> Мужской</label>
+            <label><input type="radio" name="gender" value="female" /> Женский</label>
+            <br />
+            <br />
+            <label>
+            Любимый язык программирования (можно выбрать несколько):
+            <br />
+            <select name="fav-language[]" multiple="multiple">
+                <option value="Pascal"> Pascal</option>
+                <option value="C"> C</option>
+                <option value="C++"> C++</option>
+                <option value="JavaScript"> JavaScript</option>
+                <option value="PHP"> PHP</option>
+                <option value="Python"> Python</option>
+                <option value="Java"> Java</option>
+                <option value="Haskell"> Haskell</option>
+                <option value="Clojure"> Clojure</option>
+                <option value="Prolog"> Prolog</option>
+                <option value="Scala"> Scala</option>
+            </select>
+            </label>
+            <br />
+            <br />
+            <label>
+            Биография:
+            <br />
+            <textarea name="biography" rows="5" cols="40"></textarea>
+            </label>
+            <br />
+            <br />
+            <label>
+            <input type="checkbox" name="contract-agree" /> С контрактом ознакомлен(а)
+            </label>
+            <br />
+            <br />
+            <input type="submit" value="Сохранить" />
+        </form>
+
+    </main>
+    <footer id="site-footer">
+        <p>&copy; Visca Barca</p>
+    </footer>
 </body>
 </html>
