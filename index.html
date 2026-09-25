@@ -134,45 +134,45 @@
 
         <h2 id="form-section">Форма</h2>
 
-        <form action="/" method="POST">
+        <form action="" method="POST">
             <label>
             ФИО:
             <br />
-                <input name="full-name" type="text" placeholder="блаев бла блаевич" />
+                <input name="fullname" type="text" pattern="[\u0041-\u005A\u0061-\u007A\u0410-\u044F\u0401\u0451\s\-]+" title="Разрешены только буквы, пробелы и дефис" required/>
             </label>
             <br />
             <br />
             <label>
             Телефон:
             <br />
-                <input name="phone" type="tel" placeholder="+7 900 000-00-00" />
+                <input name="phone" type="tel" pattern="\+?[0-9]+" title="Только цифры, знак + разрешён только в начале" required inputmode="numeric" />
             </label>
             <br />
             <br />
             <label>
             E-mail:
             <br />
-                <input name="email" type="email" placeholder="example@mail.ru" />
+                <input name="email" type="email" placeholder="example@mail.ru" required/>
             </label>
             <br />
             <br />
             <label>
             Дата рождения:
             <br />
-                <input name="birth-date" type="date" />
+                <input name="birth-date" type="date" max="2020-12-31" required/>
             </label>
             <br />
             <br />
             Пол:
             <br />
-            <label><input type="radio" name="gender" value="male" checked="checked" /> Мужской</label>
-            <label><input type="radio" name="gender" value="female" /> Женский</label>
+            <label><input type="radio" name="gender" value="male" checked="checked"/> Мужской</label>
+            <label><input type="radio" name="gender" value="female"/> Женский</label>
             <br />
             <br />
             <label>
             Любимый язык программирования (можно выбрать несколько):
             <br />
-            <select name="fav-language[]" multiple="multiple">
+            <select name="fav-language" multiple="multiple" required>
                 <option value="Pascal"> Pascal</option>
                 <option value="C"> C</option>
                 <option value="C++"> C++</option>
@@ -191,18 +191,17 @@
             <label>
             Биография:
             <br />
-            <textarea name="biography" rows="5" cols="40"></textarea>
+            <textarea name="biography" rows="5" cols="40" required></textarea>
             </label>
             <br />
             <br />
             <label>
-            <input type="checkbox" name="contract-agree" /> С контрактом ознакомлен(а)
+            <input type="checkbox" name="contract-agree" required/> С контрактом ознакомлен(а)
             </label>
             <br />
             <br />
             <input type="submit" value="Сохранить" />
         </form>
-
     </main>
     <footer id="site-footer">
         <p>&copy; Visca Barca</p>
