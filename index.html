@@ -2,25 +2,27 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />     <!--Эта строка указывает браузеру, в какой кодировке символов сохранён файл, чтобы он правильно отображал текст-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sanjar's site</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header id="site-header">
-        <img class="logo" src="logo.png" alt="Логотип сайта" />
-        <div class="header-right">
-            <nav id="site-nav">
-                <ul class="nav-list">
-                    <li><a href=""> Меню</a></li>
-                    <li><a href="https://store.fcbarcelona.com/?srsltid=AU7gw4W1uq1Gv3y0rMX9GCYPNU25e3MJgW3dp-zN-AagT0-911BMbo3e"> Товары</a></li>
-                    <li><a href="https://www.fcbarcelona.com/en/football/first-team/news"> Новости</a></li>
-                </ul>
-            </nav>
-            <h1 class="site-title">Суетной сайт</h1>
-        </div>
+        <img class="logo" src="images/logo.png" alt="Логотип сайта" />
+        <h1 class="site-title">Суетной сайт</h1>
+        <nav id="site-nav">
+            <ul class="nav-list">
+                <li><a href=""> Меню</a></li>
+                <li><a href="https://store.fcbarcelona.com/?srsltid=AU7gw4W1uq1Gv3y0rMX9GCYPNU25e3MJgW3dp-zN-AagT0-911BMbo3e"> Товары</a></li>
+                <li><a href="https://www.fcbarcelona.com/en/football/first-team/news"> Новости</a></li>
+            </ul>
+        </nav>
     </header>
     <main id="content">
 
+    <div id="links-table-wrapper">
+
+        <section id="links-section">
         <h2>Гиперссылки:</h2>
 
         <a href="http://kubsu.ru/"> Абсолютная ссылка на главную страницу сайта kubsu.ru</a>
@@ -30,7 +32,7 @@
         Ссылка-изображение:
         <br />
         <a href="https://kubsu.ru/">
-        <img src="image.jpg" alt="Ссылка на КубГУ" style="width: 100px;" />
+        <img src="images/kub.jpg" alt="Ссылка на КубГУ" style="width: 100px;" />
         </a>
         <br />
         <a href="/about"> Сокращенная ссылка на внутреннюю страницу</a>
@@ -61,7 +63,7 @@
         <br />
         Ссылки из областей картинки (тег map), прямоугольная и круглая области:
         <br />
-        <img src="image.jpg" alt="Карта ссылок" usemap="#linkmap" style="width: 300px;" />
+        <img src="images/skeleton.jpg" alt="Карта ссылок" usemap="#linkmap" style="width: 300px;"/>
         <map name="linkmap">
             <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область" />
             <area shape="circle" coords="220,75,60" href="https://www.fcbarcelona.com/en/" alt="Круглая область" />
@@ -82,7 +84,9 @@
             <li><a href="https://open.spotify.com/" title="Spotify"> Spotify</a></li>
         </ol>
         <a href="ftp://user:password@ftp.example.com/files/document.zip"> Ссылка на скачивание файла на сервере FTP с авторизацией</a>
+        </section>
 
+        <section id="table-section">
         <h2>Таблица</h2>
 
         <table id="data-table">
@@ -131,6 +135,9 @@
                 </tr>
             </tbody>
         </table>
+        </section>
+
+    </div>
 
         <h2 id="form-section">Форма</h2>
 
