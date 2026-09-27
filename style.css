@@ -2,44 +2,44 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    background: #edbb00;
     color: #004d98;
 }
 
 #site-header {
     width: 100%;
     background-color: #a50044;
-    color: #004d98;
+    color: #edbb00;
     box-sizing: border-box;
-    display: flex;
+    display: grid;
+    /* колонка 1 — логотип (по содержимому), колонка 2 — остальное (растягивается) */
+    grid-template-columns: auto 1fr;
     align-items: center;
+    column-gap: 15px;
 }
 
 #site-header .logo {
     width: 60px;
     height: 60px;
     margin-left: 15px;
-    margin-right: 15px;
     border-radius: 50px;
-}
-
-#site-header .header-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    grid-row: 1;
+    grid-column: 1;
 }
 
 #site-header .site-title {
     margin: 0;
     padding: 15px 20px;
     font-size: 1.6em;
-    display: flex;
-    align-items: center;
-    flex: 1;
+    grid-row: 1;
+    grid-column: 2;
 }
 
 #site-nav {
     padding: 10px 20px;
+    /* Mobile First: nav занимает вторую строку и обе колонки —
+       становится отдельным полноширинным блоком под шапкой */
+    grid-row: 2;
+    grid-column: 1 / -1;
 }
 
 #site-nav .nav-list {
@@ -47,23 +47,21 @@ body {
     padding: 0;
     list-style: none;
     display: flex;
-    float: right;
-    /*justify-content: space-between;*/
+    flex-direction: column;
 }
 
 #site-nav .nav-list li{
-    margin-left: 15px;
+    margin-left: 0;
     padding: 5px;
 }
 
 #site-nav .nav-list a {
     display: block;
-    color: #004d98;
+    color: #edbb00;
     text-decoration: none;
 }
 
 #site-nav .nav-list li:hover{
-    margin-left: 15px;
     background-color: #850044;
 }
 
@@ -72,10 +70,32 @@ body {
 }
 
 #content {
-    max-width: 960px;
-    margin: 0 auto;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
+}
+
+/* Задание 3: список ссылок и таблица оборачиваются в общий flex-контейнер,
+   чтобы с помощью order можно было менять их визуальный порядок отдельно
+   от порядка в HTML-коде (список идёт в разметке первым, таблица второй) */
+#links-table-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile First: на смартфоне таблица показывается выше списка ссылок */
+#links-table-wrapper #table-section {
+    order: -1;
+}
+
+#links-table-wrapper #links-section {
+    order: 0;
+}
+
+/* На узких экранах таблица может быть шире экрана - даём ей скролл по горизонтали,
+   а не ломаем макет всей страницы */
+#table-section {
+    overflow-x: auto;
 }
 
 #data-table {
@@ -92,16 +112,16 @@ body {
 }
 
 #data-table thead th {
-    background-color: #DB0030;
-    color: #004d98;
+    background-color: #a50044;
+    color: #edbb00;
 }
 
 #data-table tbody tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: #edbb00;
 }
 
 #data-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #DB0030;
 }
 
 #site-footer {
@@ -111,4 +131,55 @@ body {
     text-align: center;
     padding: 15px 20px;
     box-sizing: border-box;
+}
+
+/* Mobile First: правила выше — базовые (для смартфонов).
+   Начиная с 800px подключаем правила для планшетов и десктопов,
+   возвращая дизайн из предыдущего задания. */
+@media screen and (min-width: 800px) {
+
+    /* Десктоп: логотип занимает обе строки (всю высоту шапки),
+       nav — верхняя строка правой колонки (прижат вправо),
+       название сайта — нижняя строка правой колонки */
+    #site-header .logo {
+        grid-row: 1 / 3;
+    }
+
+    #site-nav {
+        grid-row: 1;
+        grid-column: 2;
+        justify-self: end;
+        padding: 5px 20px 0;
+    }
+
+    #site-header .site-title {
+        grid-row: 2;
+        grid-column: 2;
+        padding: 0 20px 15px;
+    }
+
+    #site-nav .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #site-nav .nav-list li {
+        margin-left: 15px;
+    }
+
+    #content {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    /* На планшетах и десктопах возвращаем обычный порядок:
+       список ссылок идёт первым, таблица второй (как в HTML-коде) */
+    #links-table-wrapper #links-section {
+        order: 1;
+    }
+
+    #links-table-wrapper #table-section {
+        order: 2;
+    }
+
 }
