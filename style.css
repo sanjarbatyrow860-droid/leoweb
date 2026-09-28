@@ -21,6 +21,7 @@ body {
     width: 60px;
     height: 60px;
     margin-left: 15px;
+    margin-top: 10px;
     border-radius: 50px;
     grid-row: 1;
     grid-column: 1;
