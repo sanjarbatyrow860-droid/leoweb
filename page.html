@@ -2,89 +2,29 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />     <!--Эта строка указывает браузеру, в какой кодировке символов сохранён файл, чтобы он правильно отображал текст-->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sanjar's site</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header id="site-header">
-        <img class="logo" src="images/logo.png" alt="Логотип сайта" />
-        <h1 class="site-title">Суетной сайт</h1>
-        <nav id="site-nav">
-            <ul class="nav-list">
-                <li><a href=""> Меню</a></li>
-                <li><a href="https://store.fcbarcelona.com/?srsltid=AU7gw4W1uq1Gv3y0rMX9GCYPNU25e3MJgW3dp-zN-AagT0-911BMbo3e"> Товары</a></li>
-                <li><a href="https://www.fcbarcelona.com/en/football/first-team/news"> Новости</a></li>
-            </ul>
-        </nav>
+        <a href="bracho.jpg">
+            <img class="logo" src="images/logo.png" alt="Логотип сайта" />
+        </a>
+        <div class="header-right">
+            <nav id="site-nav">
+                <ul class="nav-list">
+                    <li><a href=""> Меню</a></li>
+                    <li><a href="https://store.fcbarcelona.com/?srsltid=AU7gw4W1uq1Gv3y0rMX9GCYPNU25e3MJgW3dp-zN-AagT0-911BMbo3e"> Товары</a></li>
+                    <li><a href="https://www.fcbarcelona.com/en/football/first-team/news"> Новости</a></li>
+                </ul>
+            </nav>
+            <h1 class="site-title">Суетной сайт</h1>
+        </div>
     </header>
     <main id="content">
-    <div id="links-table-wrapper">
-        <section id="links-section">
-        <h2>Гиперссылки:</h2>
-
-        <a href="http://kubsu.ru/"> Абсолютная ссылка на главную страницу сайта kubsu.ru</a>
-        <br />
-        <a href="https://kubsu.ru/"> Абсолютная ссылка на главную сайта kubsu.ru по протоколу https</a>
-        <br />
-        Ссылка-изображение:
-        <br />
-        <a href="https://kubsu.ru/">
-        <img src="images/kub.jpg" alt="Ссылка на КубГУ" style="width: 100px;" />
-        </a>
-        <br />
-        <a href="images/about.html"> Сокращенная ссылка на внутреннюю страницу</a>
         <br />
         <a href="/"> Сокращенная ссылка на главную страницу</a>
         <br />
-        <a href="#form-section"> Ссылка на фрагмент текущей страницы, например к форме</a>
-        <br />
-        <a href="/search?category=books&sort=price&order=asc"> Ссылка с тремя параметрами в URL</a>
-        <br />
-        <a href="/product?id=42"> Ссылка с параметром id в URL</a>
-        <br />
-        <a href="./page.html"> Относительная ссылка на страницу в текущем каталоге</a>
-        <br />
-        <a href="about/page.html"> Относительная ссылка на страницу в каталоге about</a>
-        <br />
-        <a href="../page.html"> Относительная ссылка на страницу в каталоге уровнем выше</a>
-        <br />
-        <a href="../../page.html"> Относительная ссылка на страницу двумя уровнями выше</a>
-        <br />
-        Контекстная ссылка в тексте абзаца:
-        <p>
-            Ссылка на сайт лучшего футбольного клуба в мире >>><a href="https://www.fcbarcelona.com/en/">ТУТ</a><<< (для удобства советую включить vpn)
-        </p>
-        Ссылка на фрагмент страницы стороннего сайта:
-        <br />
-        <a href="https://www.fcbarcelona.com/en/#stories"> Раздел Stories на сайте Барселоны</a>
-        <br />
-        Ссылки из областей картинки (тег map), прямоугольная и круглая области:
-        <br />
-        <img src="images/skeleton.jpg" alt="Карта ссылок" usemap="#linkmap" style="width: 300px;"/>
-        <map name="linkmap">
-            <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область" />
-            <area shape="circle" coords="220,75,60" href="https://www.fcbarcelona.com/en/" alt="Круглая область" />
-        </map>
-        <br />
-        <a href=""> Ссылка с пустым href</a>
-        <br />
-        <a>Ссылка без href</a>
-        <br />
-        <a href="https://kubsu.ru/private" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам</a>
-        <br />
-        <a href="https://kubsu.ru/hidden" rel="noindex nofollow"> Ссылка, запрещенная для индексации поисковиками</a>
-        <br />
-        Нумерованный список ссылок с подписями title:
-        <ol>
-            <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ"> КубГУ</a></li>
-            <li><a href="https://www.fcbarcelona.com/en/" title="FC Barcelona"> FC Barcelona</a></li>
-            <li><a href="https://open.spotify.com/" title="Spotify"> Spotify</a></li>
-        </ol>
-        <a href="ftp://user:password@ftp.example.com/files/document.zip"> Ссылка на скачивание файла на сервере FTP с авторизацией</a>
-        </section>
-
-        <section id="table-section">
         <h2>Таблица</h2>
 
         <table id="data-table">
@@ -133,8 +73,6 @@
                 </tr>
             </tbody>
         </table>
-        </section>
-    </div>
     </main>
     <footer id="site-footer">
         <p>&copy; Visca Barca</p>
