@@ -67,7 +67,6 @@ body {
     background-color: #DB0030;
 }
 
-/* ---------- Кнопка формы ---------- */
 #site-form .btn-primary {
     background-color: #a50044;
     border-color: #a50044;
@@ -79,7 +78,17 @@ body {
     border-color: #850044;
 }
 
-/* ---------- Подвал ---------- */
+button {
+    background-color: #a50044;
+    border-color: #a50044;
+    color: #edbb00;
+}
+
+button:hover {
+    background-color: #850044;
+    border-color: #850044;
+}
+
 #site-footer {
     background-color: #a50044;
     color: #edbb00;
