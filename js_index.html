@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sanjar's site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="calc.js" defer></script>
+</head>
+<body>
+    <header id="site-header">
+        <div class="container-fluid py-2">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <a href="/leoweb/">
+                        <img class="logo rounded-circle" src="images/logo.png" alt="Логотип сайта" />
+                    </a>
+                </div>
+
+                <h1 class="col site-title mb-0">Суетной сайт</h1>
+
+                <nav id="site-nav" class="col-12 col-md-auto mt-2 mt-md-0">
+                    <ul class="nav flex-column flex-md-row justify-content-md-end">
+                        <li class="nav-item"><a class="nav-link" href="/leoweb/"> Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/leoweb/#table-section"> Таблица</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/leoweb/#form-section"> Форма</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="content" class="container py-3">
+
+        <h1>Калькулятор стоимости заказа</h1>
+
+        <form id="calc-form">
+            <div id="order"></div>
+            <p>
+                <button id="add-button" type="button">Добавить товар</button>
+                <button id="calc-button" type="button">Рассчитать</button>
+            </p>
+        </form>
+        <p id="result" aria-live="polite"></p>
+    </main>
+    <footer id="site-footer" class="text-center py-3 px-3">
+        <p class="mb-0">&copy; Visca Barca</p>
+    </footer>
+</body>
+</html>
