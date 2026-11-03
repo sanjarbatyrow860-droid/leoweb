@@ -42,6 +42,39 @@
             </p>
         </form>
         <p id="result" aria-live="polite"></p>
+
+        <hr>
+
+        <h1>Калькулятор стоимости услуги</h1>
+
+        <form id="service-form">
+            <p>
+                <label for="service-quantity">Количество:</label>
+                <input id="service-quantity" type="text" value="1" size="6" autocomplete="off">
+                <span id="service-error" class="text-danger"></span>
+            </p>
+
+            <fieldset class="mb-3">
+                <legend class="h6">Тип услуги</legend>
+                <label class="mr-3"><input type="radio" name="serviceType" value="consulting" checked> Консультация — 1000 руб.</label>
+                <label class="mr-3"><input type="radio" name="serviceType" value="layout"> Вёрстка страницы — 3000 руб.</label>
+                <label class="mr-3"><input type="radio" name="serviceType" value="support"> Поддержка сайта — 2000 руб.</label>
+            </fieldset>
+
+            <p id="service-options" hidden>
+                <label for="service-select">Вариант вёрстки:</label>
+                <select id="service-select" name="serviceOption">
+                    <option value="standard">Обычная — +0 руб.</option>
+                    <option value="responsive">Адаптивная — +1000 руб.</option>
+                    <option value="animated">Адаптивная с анимацией — +2500 руб.</option>
+                </select>
+            </p>
+
+            <p id="service-property" hidden>
+                <label><input id="service-property-checkbox" type="checkbox" name="serviceProperty"> Круглосуточная поддержка — +500 руб.</label>
+            </p>
+        </form>
+        <p id="service-result" class="font-weight-bold" aria-live="polite"></p>
     </main>
     <footer id="site-footer" class="text-center py-3 px-3">
         <p class="mb-0">&copy; Visca Barca</p>
