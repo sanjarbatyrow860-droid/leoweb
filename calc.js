@@ -8,6 +8,20 @@ const PRODUCTS = [
 ];
 const QUANTITY_PATTERN = /^\d+$/;
 
+// Калькулятор услуги: цены и правила показа опций/свойств по типам услуги.
+const SERVICES = {
+    consulting: {price: 1000, hasOptions: false, hasProperty: false},
+    layout: {price: 3000, hasOptions: true, hasProperty: false},
+    support: {price: 2000, hasOptions: false, hasProperty: true}
+};
+const SERVICE_OPTIONS = {
+    standard: 0,
+    responsive: 1000,
+    animated: 2500
+};
+const SERVICE_PROPERTY_PRICE = 500;
+const SERVICE_QUANTITY_PATTERN = /^[1-9]\d*$/;
+
 function addRow() {
     const order = document.getElementById("order");
     const row = document.createElement("p");
@@ -85,9 +99,60 @@ function calculate() {
     return false;
 }
 
+function updateServicePrice() {
+    const form = document.getElementById("service-form");
+    const select = document.getElementById("service-select");
+    const checkbox = document.getElementById("service-property-checkbox");
+    const quantityText = document.getElementById("service-quantity").value.trim();
+    const error = document.getElementById("service-error");
+    const result = document.getElementById("service-result");
+    const service = SERVICES[form.elements.serviceType.value];
+    let price = service.price;
+
+    // Показываем или скрываем select и чекбокс в зависимости от типа услуги.
+    document.getElementById("service-options").hidden = !service.hasOptions;
+    document.getElementById("service-property").hidden = !service.hasProperty;
+
+    // Для скрытых элементов сбрасываем значения, чтобы они не влияли на цену.
+    if (service.hasOptions) {
+        price += SERVICE_OPTIONS[select.value];
+    } else {
+        select.selectedIndex = 0;
+    }
+    if (service.hasProperty) {
+        if (checkbox.checked) {
+            price += SERVICE_PROPERTY_PRICE;
+        }
+    } else {
+        checkbox.checked = false;
+    }
+
+    error.textContent = "";
+    result.textContent = "";
+
+    if (!SERVICE_QUANTITY_PATTERN.test(quantityText)) {
+        error.textContent = "Ошибка: введите целое число больше нуля.";
+        return;
+    }
+    result.textContent = "Стоимость услуги: " +
+            price * parseInt(quantityText, 10) + " руб.";
+}
+
+function initServiceCalculator() {
+    const form = document.getElementById("service-form");
+
+    form.addEventListener("input", updateServicePrice);
+    form.addEventListener("change", updateServicePrice);
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+    });
+    updateServicePrice();
+}
+
 function init() {
     const form = document.getElementById("calc-form");
 
+    initServiceCalculator();
     addRow();
     document.getElementById("add-button").addEventListener("click", addRow);
     document.getElementById("calc-button").addEventListener("click", calculate);
