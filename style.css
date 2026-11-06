@@ -93,3 +93,40 @@ button:hover {
     background-color: #a50044;
     color: #edbb00;
 }
+
+/* ---------- Галерея (Slick) ---------- */
+/* Поля слева, справа и снизу, чтобы поместились стрелки и пейджер. */
+.gallery {
+    margin: 0 40px 50px;
+}
+
+.gallery-item {
+    padding: 0 5px;
+}
+
+    .gallery-item img {
+        display: block;
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
+/* Стрелки и точки по умолчанию белые/чёрные, перекрашиваем под цвета сайта. */
+.gallery .slick-prev:before,
+.gallery .slick-next:before {
+    color: #a50044;
+    opacity: 1;
+}
+
+.gallery .slick-prev.slick-disabled:before,
+.gallery .slick-next.slick-disabled:before {
+    opacity: 0.25;
+}
+
+.gallery .slick-dots li button:before {
+    color: #004d98;
+}
+
+.gallery .slick-dots li.slick-active button:before {
+    color: #a50044;
+}
